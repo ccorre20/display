@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @measurement.date %>
+</p>
+
+<p>
+  <strong>Temp:</strong>
+  <%= @measurement.temp %>
+</p>
+
+<p>
+  <strong>Hum:</strong>
+  <%= @measurement.hum %>
+</p>
+
+<%= link_to 'Edit', edit_measurement_path(@measurement) %> |
+<%= link_to 'Back', measurements_path %>

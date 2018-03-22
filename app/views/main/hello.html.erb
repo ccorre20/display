@@ -1,0 +1,12 @@
+<h1>Succesfully Connected to:</h1>
+<p>Arduino (COM 3)</p>
+<p>Detected 1 Sensor</p>
+<%= line_chart ({30.day.ago => 26.2, 29.day.ago =>25.5, 
+                28.day.ago => 28.3, 27.day.ago =>24.8,
+                26.day.ago => 30.2, 25.day.ago => 29.3,
+                24.day.ago => 26.2, 23.day.ago => 27.9,
+                22.day.ago => 25.3, 21.day.ago => 24.3, 
+                20.day.ago => 28.2, 19.day.ago => 27.1}), 
+                min: 0, max: 40, id: "Temperature",
+                ytitle: "Average Temperature (Deg.C)",
+                xtitle: "Time", points: false, legend: false %>
