@@ -1,7 +1,17 @@
 class MainController < ApplicationController
   
   def hello
-    @m = Measurement.all
+    @data_t = {}
+    @data_h = {}
+    m = Measurement.all
+    m.each do |i|
+      @data_t[i.date] = i.temp
+      @data_h[i.date] = i.hum
+    end
+    puts "data_t"
+    puts @data_t
+    puts "data_h"
+    puts @data_h
   end
   
   def refresh
@@ -24,7 +34,7 @@ class MainController < ApplicationController
       end
     end 
     m = Measurement.new
-    m.date = DateTime.now.to_time
+    m.date = DateTime.now
     m.temp = t
     m.hum = h
     if m.save
